@@ -29,7 +29,7 @@ Dieses Projekt entsteht neben meinem Studium der Wirtschaftsinformatik an der HA
 | Geplant  | Authentifizierung (z. B. JWT)     |
 | Geplant  | Deployment auf eigener Domain |
 
-## Vorraussetzungen und Einrichtung der Datenbank (Es könnten hier eigentlich ein paat Dinge doppelt sein)
+## Vorraussetzungen und Einrichtung der Datenbank 
 1. PostgreSQL installieren
    sudo apt update
    sudo apt install postgresql postgresql-contrib
