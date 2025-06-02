@@ -23,7 +23,7 @@ Dieses Projekt entsteht neben meinem Studium der Wirtschaftsinformatik an der HA
 
 | Status   | Funktion                           |
 |----------|----------------------------------|
-| Geplant  | CRUD für Arbeitssitzungen (TrackedSession) |
+| Done     | CRUD für Arbeitssitzungen (TrackedSession) |
 | Geplant  | Dauerberechnung anhand Zeitstempel |
 | Geplant  | Analyseansicht vergangener Sessions |
 | Geplant  | Authentifizierung (z. B. JWT)     |
