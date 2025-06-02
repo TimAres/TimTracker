@@ -22,7 +22,8 @@ import java.time.temporal.Temporal;
 public class TrackedSession {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "tracked_session_seq")
+    @SequenceGenerator(name = "tracked_session_seq", sequenceName = "tracked_session_seq", allocationSize = 1)
     private Long id;
 
     private String sessionTitel;
