@@ -1,0 +1,209 @@
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~|
+# Character encoding related QUICK-TEST-LINE: [Ä]=(Ae),[Ö]=(Oe),[Ü]=(Ue),[ä]=(ae),[ö]=(oe),[ü]=ue,[ß]=(szet)            |
+########################################################################################################################|<-121
+###                                                                                                                     V
+###
+###
+###
+###             .gitignore for Java-SE using IntelliJ
+###             ####################################
+###
+###
+###############################################################################
+#
+#
+#   version :   2025/04/27              basiert auf (2025/02/23, 2024/02/18)
+#   author :    Tim Haase              [UTF8]: Tim Haase ;  tim.haase@haw-hamburg.de
+#
+###############################################################################
+
+
+
+
+###
+### exclude everything ("*") and re)include folders ("!*/") afterwards and this way prompt GIt to recursively (re)include (all wanted) files
+### the statement ("!*/") to (re)include all directory has not to be the first - it can also be everywhere, especially the last
+###
+*
+!*/
+.idea/
+
+
+
+###
+### (re)include wanted stuff (this is done recursively as result of "!*\")
+###=========================
+###
+#
+# (re)include explizit stuff (recursively as result of "!*\")
+
+!.gitignore
+
+!readme.md
+!ReadMe.txt
+!*readme*.txt
+
+!*.java
+
+# Gradle wrapper Dateien - damit der Wrapper immer mitkommt Editiert für Gradle von Tim
+# Gradle Dateien sollten NICHT ausgeschlossen werden
+# Vermeide Regeln wie diese:
+# build/
+# gradle/
+# gradle-wrapper/
+
+!gradle-wrapper.properties
+!gradle-wrapper.jar
+!gradlew
+!gradlew.bat
+
+# Gradle Build-Ordner - Ignorieren der Build-Ordner ist nicht immer eine gute Idee für ein Projekt
+!build/
+
+# Dateien wie gradle settings, die für die Projektstruktur wichtig sind
+!settings.gradle
+!build.gradle
+
+
+
+
+###
+### exclude for safety's sake  -  NOT needed  if everything was excluded before
+###==========================
+###
+
+# exclude OS specific stuff:
+#---------------------------
+#
+# exclude annoying stuff: DOSe
+"System Volume Information"
+**/Thumbs.db
+**/*.swp
+#
+# exclude annoying stuff: Mac OS X
+**/.DS_Store
+
+# exclude BlueJ/project specific stuff:
+#--------------------------------------
+**/*.class
+**/*.ctxt
+**/doc
+**/package.bluej
+
+# exclude ObjectAid specific stuff:
+#----------------------------------
+**/*.ucls
+**/*.gif
+**/*.jpg
+**/*.jpeg
+**/*.png
+
+
+# exclude the very synchronize script (respectively "check-in" script), since problems might occur, if synchronize script checks itself in (synchronize was named check-in before)
+synchronizeWithOriginMasterBranch.bash
+
+
+
+
+
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#
+# THE END  -  END OF SCRIPT
+#==========================
+#
+#
+# Remember, unfortunately
+#
+#->     *                       # wont work part1 :'-(
+#->     !**/wantedFile          # wont work part2 :'-(
+# is not working - you can NOT (re)include files in directories this way
+#
+# the workaround (see above) is working fine
+#
+#
+#
+#VVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV
+#
+# => only the listed exceptions in the current directory are checked in
+#
+# "!.gitignore"
+#     including ".gitignore" results in same (git-)behavior everywhere - is this wanted?
+#
+# "*"
+#     excludes everything - unfortunately it is NOT supported to (re)include a (sub-)directory afterwards (2014/10/15)
+#
+#     but, you can type directly in GIT bash e.g.:
+#     "git add --force CEPtemplate/Project/*.h"
+#     "git add --force CEPtemplate/Project/*.c"
+#
+#
+#
+# see:
+#
+# http://git-scm.com/docs/gitignore
+#
+# http://stackoverflow.com/questions/6919121/why-are-there-2-ways-to-unstage-a-file-in-git
+# git rm --cached
+# git reset HEAD file
+#
+# http://stackoverflow.com/questions/12191254/gitignore-continue-to-track-file-after-adding-it-once-by-force
+#
+#
+#
+#
+#
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#
+# Checklist of file that might be checked in
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#
+# ...
+# ===================================================================
+# Ergänzung: Frontend-Projekt (Next.js / React 19) durch Bilel
+# ===================================================================
+
+# frontend Ordner Regeln
+/frontend/node_modules
+/frontend/.next
+/frontend/out
+/frontend/.env*
+
+# dependencies
+/node_modules
+/.pnp
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/versions
+
+# testing
+/coverage
+
+# next.js
+/.next/
+/out/
+
+# production
+/build
+
+# misc
+.DS_Store
+*.pem
+
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# env files (can opt-in for committing if needed)
+/.env*
+
+# vercel
+.vercel
+
+# typescript
+*.tsbuildinfo
+next-env.d.ts
